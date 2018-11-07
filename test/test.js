@@ -6,10 +6,9 @@ const {IPMA} = require('..');
 const ipma = new IPMA();
 
 describe('#forecast()', () => {
-  it('responds with 3 days worth of data for \'Cabo Espichel\' (local=42)', async () => {
+  it('responds with at least 3 days worth of data for \'Cabo Espichel\' (local=42)', async () => {
     const forecast = await ipma.forecast(42);
-    Object.values(forecast).should.have.length(3);
-    Object.values(forecast)[0].height.should.have.length(24);
-    Object.values(forecast)[0].time.should.have.length(24);
-  });
+    Object.values(forecast).length.should.be.aboveOrEqual(3);
+    Object.values(forecast)[0].data.length.should.be.aboveOrEqual(24);
+  }).timeout(15000);
 });

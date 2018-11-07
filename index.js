@@ -26,38 +26,43 @@ class IPMA {
           if (error) {
             reject(error);
           }
+
           const $ = cheerio.load(body);
 
-          const waves = {};
-
+          const waves = [];
           const today = moment().startOf('day');
 
           $('table').each((i, el) => {
-            const day = today.format('YYYY-MM-DD');
-            waves[day] = {time: [], height: [], waves: [], power: [], source: 'ipma.pt'};
+            const newWave = {date: today.valueOf(), data: [], source: 'ipma.pt'};
 
+            let newEl;
             $(el).find('tr').each((j, elJ) => {
+              newEl = {};
               $(elJ).find('td').each((k, elK) => {
                 elK = $(elK);
                 switch (k) {
                   case 0:
-                    waves[day].time.push(today.valueOf());
+                    newEl.time = today.valueOf();
                     break;
                   case 1:
-                    waves[day].height.push(parseFloat(elK.html()));
+                    newEl.height = parseFloat(elK.text());
                     break;
                   case 2:
-                    waves[day].waves.push(parseFloat(elK.html()));
+                    newEl.waves = parseFloat(elK.text());
                     break;
                   case 10:
-                    waves[day].power.push(parseFloat(elK.html()));
+                    newEl.power = parseFloat(elK.text());
                     break;
                   default:
                     break;
                 }
               });
+              if (Object.keys(newEl).length > 0) {
+                newWave.data.push(newEl);
+              }
               today.add(1, 'hours');
             });
+            waves.push(newWave);
           });
           resolve(waves);
         });
