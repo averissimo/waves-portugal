@@ -11,6 +11,8 @@ class IPMA {
     return 'https://www.ipma.pt/pt/maritima/costeira/index.jsp';
   }
 
+  // See page below for the correct id to use here
+  //  https://www.ipma.pt/pt/maritima/costeira/index.jsp?selLocal=42&idLocal=42
   async forecast(id) {
     const promise = await new Promise((resolve, reject) => {
       request
