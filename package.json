@@ -9,7 +9,15 @@
   "xo": {
     "space": true
   },
-  "author": "",
+  "homepage": "https://github.com/averissimo/waves-portugal",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/averissimo/waves-portugal"
+  },
+  "bugs": {
+    "url": "https://github.com/averissimo/waves/issues"
+  },
+  "author": "André Veríssimo",
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "cheerio": "^1.0.0-rc.2",
