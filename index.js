@@ -34,7 +34,7 @@ class IPMA {
 
           $('table').each((i, el) => {
             const day = today.format('YYYY-MM-DD');
-            waves[day] = {time: [], height: [], waves: [], power: []};
+            waves[day] = {time: [], height: [], waves: [], power: [], source: 'ipma.pt'};
 
             $(el).find('tr').each((j, elJ) => {
               $(elJ).find('td').each((k, elK) => {
