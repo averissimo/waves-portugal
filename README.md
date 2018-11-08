@@ -1,8 +1,6 @@
-# Weather forecast in Portugal
+# Weather forecast in Portugal [![NPM version][npm-image]][npm-url] [![Build Status](https://travis-ci.org/averissimo/waves-portugal.svg?branch=master)](https://travis-ci.org/averissimo/waves-portugal) [![codecov](https://codecov.io/gh/averissimo/waves-portugal/branch/master/graph/badge.svg)](https://codecov.io/gh/averissimo/waves-portugal) [![Greenkeeper badge](https://badges.greenkeeper.io/averissimo/waves-portugal.svg)](https://greenkeeper.io/) 
 
 > Calls multiple sources for weather forecast in Portugal
-
-[![Build Status](https://travis-ci.org/averissimo/waves-portugal.svg?branch=master)](https://travis-ci.org/averissimo/waves-portugal) [![Greenkeeper badge](https://badges.greenkeeper.io/averissimo/waves-portugal.svg)](https://greenkeeper.io/) [![codecov](https://codecov.io/gh/averissimo/waves-portugal/branch/master/graph/badge.svg)](https://codecov.io/gh/averissimo/waves-portugal)
 
 ### Install
 
