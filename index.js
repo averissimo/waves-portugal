@@ -59,8 +59,8 @@ class IPMA {
               });
               if (Object.keys(newEl).length > 0) {
                 newWave.data.push(newEl);
+                today.add(1, 'hours');
               }
-              today.add(1, 'hours');
             });
             waves.push(newWave);
           });
