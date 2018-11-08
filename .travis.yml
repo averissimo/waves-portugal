@@ -1,3 +1,11 @@
 language: node_js
 node_js:
-  - 10
+- 10
+deploy:
+  provider: npm
+  email: afsverissimo@gmail.com
+  api_key:
+    secure: EXgvksvN5oJQHt3YwddonKxxPWL6CGhlq/aSoV5sQhWCfY1Wcp8RYDMaFncnTnAq9UL0SEWgYeixTfc+vs2E/itEkJBrliUgM0G99/4Gp8Ej7S8yz2OHu6aAyNUJQv6GB0wTDuOXGanoSEn4t4hHZk/wgHvwHiyp9QMdCop/nc18hzaZVzPlPR8yqFxF8M8d/rYI1ouiz52VQ18mRW287ItbvSTpGZrl29u9CfZsJsoyZkQQD7BSk1g/kuNSzuaVkL9xVDbIyJ4zHJUBxpYKlk/SNyceALNqXJKN4WFEE9ItJubcNrSyK0JZ3EHWHQuwoMm3UeVumNJYjZ21mvSZQjXMRQTQvPXO6Q3aH8gopMQ4rIE5UHCG3ZKvvPlQybRyUXKunJbhO545Rzc5PV86nb1XlEB6A6A9/nDHZ1S4RNgXmcXhwHNFtxQqHr5VfFM/6pelt8VeJB5b8mn+pk5OcNpUQdDvU/HMviSzwx5d2lLl2S+RWl41yuEBsx3vy2KT9Ty9e5zBdzwTqUgqnpVPHcIMSu6prBSk5OB9tW/ab26y13RL15/21zDkJDoNg0jmh9ynvmJXAwDw9DOiVsPPudTwZl1sa2V8vXHhX1uU74FKfIdsuhXX/OldKsm6aXPtkIj+OnGHLIjU7BBDQeMxLPapzVc5FkesQjUcwnN4fpc=
+  on:
+    tags: true
+    repo: averissimo/waves-portugal
