@@ -1,6 +1,6 @@
 {
   "name": "waves-portugal",
-  "version": "0.1.8",
+  "version": "0.1.9",
   "description": "Retrieve wave information for Portuguese official weather institute",
   "main": "index.js",
   "scripts": {
@@ -21,15 +21,15 @@
   "author": "André Veríssimo",
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "cheerio": "^1.0.0-rc.2",
-    "moment": "^2.23.0",
+    "cheerio": "^1.0.0-rc.3",
+    "moment": "^2.24.0",
     "request": "^2.88.0"
   },
   "devDependencies": {
-    "codecov": "^3.1.0",
-    "mocha": "^6.2.2",
-    "nyc": "^13.1.0",
+    "codecov": "^3.6.2",
+    "mocha": "^5.2.0",
+    "nyc": "^15.0.0",
     "should": "^13.2.3",
-    "xo": "^0.24.0"
+    "xo": "^0.25.3"
   }
 }
