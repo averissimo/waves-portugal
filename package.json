@@ -1,6 +1,6 @@
 {
   "name": "waves-portugal",
-  "version": "0.1.10",
+  "version": "0.1.11",
   "description": "Retrieve wave information for Portuguese official weather institute",
   "main": "index.js",
   "scripts": {
