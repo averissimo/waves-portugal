@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "xo && nyc mocha",
-    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov",
-    "snyk-protect": "snyk protect",
-    "prepare": "npm run snyk-protect"
+    "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "xo": {
     "space": true
@@ -25,8 +23,7 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "moment": "^2.27.0",
-    "request": "^2.88.0",
-    "snyk": "^1.369.0"
+    "request": "^2.88.0"
   },
   "devDependencies": {
     "codecov": "^3.6.5",
@@ -34,6 +31,5 @@
     "nyc": "^15.0.1",
     "should": "^13.2.3",
     "xo": "^0.26.1"
-  },
-  "snyk": true
+  }
 }
