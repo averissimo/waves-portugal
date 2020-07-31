@@ -32,33 +32,33 @@ class IPMA {
           const waves = [];
           const today = moment().startOf('day');
 
-          $('table').each((i, el) => {
+          $('table').each((i, element) => {
             const newWave = {date: today.valueOf(), data: [], source: 'ipma.pt'};
 
-            let newEl;
-            $(el).find('tr').each((j, elJ) => {
-              newEl = {};
-              $(elJ).find('td').each((k, elK) => {
-                elK = $(elK);
+            let newElement;
+            $(element).find('tr').each((j, elmentJ) => {
+              newElement = {};
+              $(elmentJ).find('td').each((k, elementK) => {
+                elementK = $(elementK);
                 switch (k) {
                   case 0:
-                    newEl.time = today.valueOf();
+                    newElement.time = today.valueOf();
                     break;
                   case 1:
-                    newEl.height = parseFloat(elK.text());
+                    newElement.height = Number.parseFloat(elementK.text());
                     break;
                   case 2:
-                    newEl.waves = parseFloat(elK.text());
+                    newElement.waves = Number.parseFloat(elementK.text());
                     break;
                   case 10:
-                    newEl.power = parseFloat(elK.text());
+                    newElement.power = Number.parseFloat(elementK.text());
                     break;
                   default:
                     break;
                 }
               });
-              if (Object.keys(newEl).length > 0) {
-                newWave.data.push(newEl);
+              if (Object.keys(newElement).length > 0) {
+                newWave.data.push(newElement);
                 today.add(1, 'hours');
               }
             });
