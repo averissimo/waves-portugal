@@ -1,10 +1,10 @@
 /* eslint no-unused-vars: ["error", { "varsIgnorePattern": "[iI]gnored" }] */
-const moment = require('moment');
-const {IPMA} = require('.');
+import moment from 'moment';
+import {IPMA} from './index.js';
 
 const ipma = new IPMA();
 
-ipma.forecast(42).then(response => {
+export default ipma.forecast(42).then(response => {
   for (const element of response) {
     console.log('date', moment(element.date).format('YYYY/MM/DD'), element.date);
     for (const element2 of element.data) {
@@ -14,3 +14,4 @@ ipma.forecast(42).then(response => {
     }
   }
 }).catch(error => console.log(error));
+

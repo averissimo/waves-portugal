@@ -3,6 +3,7 @@
   "version": "0.1.11",
   "description": "Retrieve wave information for Portuguese official weather institute",
   "main": "index.js",
+  "type": "module",
   "scripts": {
     "test": "xo && nyc mocha",
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
@@ -30,6 +31,6 @@
     "mocha": "^7.2.0",
     "nyc": "^15.1.0",
     "should": "^13.2.3",
-    "xo": "^0.32.1"
+    "xo": "^0.50.0"
   }
 }

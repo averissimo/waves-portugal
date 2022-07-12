@@ -1,11 +1,12 @@
-const cheerio = require('cheerio');
-const request = require('request');
-const moment = require('moment');
+import cheerio from 'cheerio';
+import request from 'request';
+import moment from 'moment';
 
 class IPMA {
+  /* Useless constructor
   constructor() {
-    this.caca = 1;
   }
+  */
 
   static get FORECAST_URL() {
     return 'https://www.ipma.pt/pt/maritima/costeira/index.jsp';
@@ -20,8 +21,8 @@ class IPMA {
           url: IPMA.FORECAST_URL,
           qs: {
             selLocal: id,
-            idLocal: id
-          }
+            idLocal: id,
+          },
         }, (error, reponse, body) => {
           if (error) {
             reject(error);
@@ -72,4 +73,4 @@ class IPMA {
   }
 }
 
-module.exports = {IPMA};
+export {IPMA};
