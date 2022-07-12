@@ -12,8 +12,6 @@ $ npm install waves-portugal
 
 ### Usage
 
-You neet get a darksky API key from [darksky.net](https://darksky.net/dev/account) for this data source
-
 ```javascript
 const {IPMA} = require('waves-portugal');
 
