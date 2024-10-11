@@ -24,7 +24,9 @@
   "dependencies": {
     "cheerio": "^1.0.0-rc.3",
     "moment": "^2.27.0",
-    "request": "^2.88.0"
+    "request": "^2.88.0",
+    "semver": "^7.6.3",
+    "tough-cookie": "^5.0.0"
   },
   "devDependencies": {
     "codecov": "^3.7.2",
