@@ -6,6 +6,7 @@
   "type": "module",
   "scripts": {
     "test": "xo && nyc mocha",
+    "visual-test": "node visual-test.js",
     "report-coverage": "nyc report --reporter=text-lcov > coverage.lcov && codecov"
   },
   "xo": {
